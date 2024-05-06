@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { VITE_BACKEND_URL } from "../App";
 
@@ -51,6 +51,10 @@ const LoginPage = () => {
                     <div>
                         { !isLoading && ( <button className="block w-full mt-6 bg-blue-700 text-white rounded-sm px-4 py-2 font-bold hover:bg-blue-600 hover:cursor-pointer">Login</button>)}         
                     </div>
+                    <div>
+                        { !isLoading && ( <Link to="/register"> <button className="block w-full mt-6 bg-blue-700 text-white rounded-sm px-4 py-2 font-bold hover:bg-blue-600 hover:cursor-pointer">Cadastrar-se</button> </Link>)}         
+                    </div>
+
                 </div>
             </form>
         </div>
